@@ -13,19 +13,20 @@
   <meta property="og:image" content="https://yunheeshim.com/assets/profile.jpg" />
 
   <style>
+
     :root{
-      --bg: #0b0d12;
-      --panel: rgba(255,255,255,0.06);
-      --panel-2: rgba(255,255,255,0.08);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.68);
-      --faint: rgba(255,255,255,0.52);
-      --border: rgba(255,255,255,0.10);
-      --shadow: 0 18px 50px rgba(0,0,0,0.45);
-      --radius: 20px;
-      --max: 980px;
-      --accent: #9ae6ff;
-    }
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --panel-2: #f9fafb;
+  --text: #111827;   /* 거의 검정 */
+  --muted: #374151;  /* 짙은 회색/남색 톤 */
+  --faint: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 12px 30px rgba(0,0,0,0.08);
+  --radius: 20px;
+  --max: 980px;
+  --accent: #2563eb; /* 필요하면 나중에 링크/버튼에만 */
+}
 
     *{ box-sizing: border-box; }
 
@@ -36,8 +37,8 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: #ffffff;   /* 전체 배경 */
-  color: #111827;
+  background: #dee2e3;   /* 전체 배경 */
+  color: #061940;
 }
 
     
@@ -52,14 +53,14 @@ body {
     }
 
     header{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      background: linear-gradient(to bottom, rgba(11,13,18,0.85), rgba(11,13,18,0.35));
-      border-bottom: 1px solid var(--border);
-    }
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: #ffffff;        /* 그라데이션 제거 */
+  border-bottom: 1px solid #e5e7eb; /* 얇은 라인만 (원하면 0으로) */
+}
     .nav{
       max-width: var(--max);
       margin: 0 auto;
@@ -73,7 +74,7 @@ body {
       font-weight: 700;
       letter-spacing: 0.2px;
     }
-    .brand span{ color: var(--accent); }
+    .brand span{ color: inherit; }
     .links{
       display:flex;
       gap: 14px;
@@ -151,13 +152,13 @@ body {
       margin: 14px 0 18px;
     }
     .chip{
-      font-size: 13px;
-      color: rgba(255,255,255,0.78);
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-    }
+  font-size: 13px;
+  color: #0f172a;          /* 짙은 남색 */
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #f3f4f6;     /* 연한 회색 배경 */
+  border: 1px solid #e5e7eb;
+}
 
     .cta{
       display:flex;
@@ -203,7 +204,7 @@ body {
       font-size: 18px;
       letter-spacing: -0.1px;
     }
-    p{ margin: 0 0 10px; color: rgba(255,255,255,0.86); }
+    p{ margin: 0 0 10px; color: var(--text); }
     .small{ color: var(--muted); font-size: 14px; }
 
     .grid-2{
