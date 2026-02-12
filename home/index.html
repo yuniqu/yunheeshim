@@ -104,40 +104,31 @@ body {
     }
     .hero-inner{
       display:grid;
-      grid-template-columns: 160px 1fr;
+      grid-template-columns: 200px 1fr;
       gap: 18px;
       align-items: center;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 760px) {
   .hero h1 {
     font-size: 12px;
   }
 }
 
     .avatar{
-      width: 160px;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.06);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-
-    .avatar{
-  width: 180px;        /* 원하는 크기 */
+  width: 200px;        /* 그리드 칸과 맞춤 */
   border-radius: 18px;
-  overflow: hidden;
+  overflow: hidden;    /* 둥근 모서리 유지 */
+  border: 1px solid var(--border);
+  background: #f3f4f6;
 }
-    .avatar .fallback{
-      color: var(--faint);
-      font-size: 13px;
-      padding: 12px;
-      text-align:center;
-    }
+
+.avatar img{
+  width: 100%;
+  height: auto;        /* 절대 자르지 않음 */
+  display: block;
+}
+
 
     h1{
       margin: 12px 0;
@@ -389,7 +380,8 @@ My current dissertation project explores how content creators are motivated to m
       <section id="teaching">
         <h2>Teaching and Talks</h2>
         <div class="item">
-          <div class="title">Data in Context (Rutgers)</div>
+          <div class="title">Data in Context (Rutgers, 20 students, Hybrid course)</div>
+          <div class="meta">2025 Fall and 2026 Spring</div>
           <div class="meta">Lecturer · Topics: Data, Sociotechnical systems, Ethics, and Society</div>
           <ul>
             <li>In-class exercises and discussion memos</li>
@@ -398,10 +390,10 @@ My current dissertation project explores how content creators are motivated to m
           </ul>
         </div>
 
-                <h2>Gueest Lecture</h2>
         <div class="item">
           <div class="title">Introduction to IT and Informatics (Rutgers, 250+ students)</div>
-          <div class="meta">Gueest lecture Week 12 & 13· Topics: Human Computer Interaction, Online Problems</div>
+          <div class="meta">2024 Fall</div>
+          <div class="meta">Gueest lecture Week 12 and 13· Topics: Human Computer Interaction, Online Problems</div>
           <ul>
             <li>In-class exercises and discussion memos</li>
             <li>Algorithmic fairness & generative AI policy debates</li>
