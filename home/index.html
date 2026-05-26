@@ -90,12 +90,15 @@
 }
 
 
-    .evaluation-img {
-  width: 85% !important;
-  max-width: 85% !important;
-  height: auto !important;
+.evaluation-img {
+  width: 85%;
+  max-width: calc(100% - 28px);
+  height: auto;
   display: block;
+  margin-left: 28px;
+  margin-right: 0;
 }
+    
     
 body {
   margin: 0;
@@ -490,9 +493,9 @@ My current dissertation project explores how content creators are motivated to m
 
 <p>
   <img
+    class="evaluation-img"
     src="./evaluation.png"
     alt="Course evaluation feedback"
-    style="width: 85%; height: auto; display: block;"
   />
 </p>
         
